@@ -28,7 +28,23 @@ class _RegesterScreenState extends State<RegesterScreen> {
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
-            expandedHeight: 300,
+            leading: Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: GestureDetector(
+                onTap: () {
+                  NavAndFinish(context, LoginScreen());
+                },
+                child: const CircleAvatar(
+                  radius: 40,
+                  backgroundColor: Colors.black,
+                  child: Icon(
+                    Icons.arrow_back_ios,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ),
+            expandedHeight: 250,
             backgroundColor: Colors.white,
             flexibleSpace: FlexibleSpaceBar(
               background: Image.asset('images/login.png'),
